@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Tracker UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Vertical accent bar -->
+    <div class="accent-bar"></div>
+    <!-- Dynamic animated background layer -->
+    <div class="dynamic-bg">
+        <svg width="100%" height="100%" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="dynamic-bg-svg">
+            <defs>
+                <radialGradient id="circle1" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#1976d2" stop-opacity="0.18"/>
+                    <stop offset="100%" stop-color="#1976d2" stop-opacity="0"/>
+                </radialGradient>
+                <radialGradient id="circle2" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#388e3c" stop-opacity="0.15"/>
+                    <stop offset="100%" stop-color="#388e3c" stop-opacity="0"/>
+                </radialGradient>
+            </defs>
+            <circle id="bgc1" cx="300" cy="120" r="180" fill="url(#circle1)">
+                <animate attributeName="cx" values="300;400;300" dur="8s" repeatCount="indefinite"/>
+                <animate attributeName="cy" values="120;180;120" dur="7s" repeatCount="indefinite"/>
+            </circle>
+            <circle id="bgc2" cx="1200" cy="200" r="140" fill="url(#circle2)">
+                <animate attributeName="cy" values="200;120;200" dur="9s" repeatCount="indefinite"/>
+            </circle>
+            <path fill="#b71c1c" fill-opacity="0.07" d="M0,240 Q400,320 900,200 T1440,320 V320 H0Z">
+                <animate attributeName="d" dur="10s" repeatCount="indefinite"
+                    values="M0,240 Q400,320 900,200 T1440,320 V320 H0Z;M0,220 Q400,200 900,260 T1440,220 V320 H0Z;M0,240 Q400,320 900,200 T1440,320 V320 H0Z"/>
+            </path>
+        </svg>
+    </div>
+    <!-- Artistic SVG background -->
+    <div class="art-bg">
+        <svg width="100%" height="100%" viewBox="0 0 1440 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="animated-bg">
+            <defs>
+                <linearGradient id="bg-gradient" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#1976d2" stop-opacity="0.22"/>
+                    <stop offset="100%" stop-color="#388e3c" stop-opacity="0.18"/>
+                </linearGradient>
+            </defs>
+            <path fill="url(#bg-gradient)" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+                <animate attributeName="d" dur="8s" repeatCount="indefinite"
+                    values="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z;
+                    M0,180L80,160C160,140,320,120,480,140C640,160,800,220,960,220C1120,220,1280,160,1360,140L1440,120L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z;
+                    M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"/>
+            </path>
+            <circle cx="1200" cy="60" r="60" fill="#388e3c" fill-opacity="0.12">
+                <animate attributeName="cy" values="60;90;60" dur="6s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="200" cy="40" r="40" fill="#b71c1c" fill-opacity="0.10">
+                <animate attributeName="cx" values="200;250;200" dur="7s" repeatCount="indefinite"/>
+            </circle>
+        </svg>
+        <!-- Floating shapes -->
+        <div class="float-shape shape1"></div>
+        <div class="float-shape shape2"></div>
+        <div class="float-shape shape3"></div>
+    </div>
+    <!-- Confetti celebration SVG -->
+    <svg id="confetti" class="confetti-svg" width="100vw" height="100vh" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
+    <div class="container animated-border">
+        <div class="logo-row">
+            <div class="logo-icon">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="6" y="12" width="36" height="24" rx="4" fill="#1976d2"/>
+                    <rect x="12" y="18" width="24" height="12" rx="2" fill="#fff"/>
+                    <rect x="18" y="22" width="12" height="4" rx="1" fill="#388e3c"/>
+                </svg>
+            </div>
+            <h1>Inventory Tracker</h1>
+        </div>
+        <div class="subtitle">Retail & Supply Management Made Beautiful</div>
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search items...">
+            <button id="exportBtn">Export to CSV</button>
+        </div>
+        <form id="itemForm">
+            <input type="hidden" id="itemId">
+            <input type="text" id="itemName" placeholder="Item Name" required>
+            <input type="number" id="itemQuantity" placeholder="Quantity" min="0" required>
+            <input type="number" id="itemPrice" placeholder="Price" min="0" step="0.01" required>
+            <button type="submit" id="addUpdateBtn">Add Item</button>
+            <button type="button" id="cancelEditBtn" style="display:none;">Cancel</button>
+        </form>
+        <table id="inventoryTable">
+            <thead>
+                <tr>
+                    <th data-sort="name"><span class="th-icon">📦</span> Name</th>
+                    <th data-sort="quantity">Quantity</th>
+                    <th data-sort="price">Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Inventory items will be rendered here -->
+            </tbody>
+        </table>
+        <footer class="footer-gradient">Inventory Tracker &copy; 2025</footer>
+    </div>
+    <!-- Floating Action Button -->
+    <button class="fab" id="fabAdd" title="Add New Item">+</button>
+    <!-- Toast/Notification Area -->
+    <div id="toast" class="toast"></div>
+    <script src="app.js"></script>
+</body>
+</html> 
