@@ -1,4 +1,7 @@
-# Inventory-Tracker-UI
+# Inventory-Tracker-UI link
+
+https://inventory-tracker-ui-ecru.vercel.app/
+
 This Inventory Tracker UI is a visually stunning, easy-to-use, and feature-rich tool for managing retail or supply stock. It’s perfect for small businesses, personal use, or as a showcase of modern web UI design—all with zero setup required!
 
 How to Run the Inventory Tracker UI
